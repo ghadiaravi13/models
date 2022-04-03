@@ -2,7 +2,7 @@
 set -ux
 
 SAVE_DIR=outputs/DailyDialog.baseline.infer
-VOCAB_PATH=model/Bert/vocab.txt
+VOCAB_PATH=model-baseline/Bert/vocab.txt
 DATA_DIR=data/DailyDialog
 INIT_CHECKPOINT=outputs/DailyDialog.baseline/best.model
 DATA_TYPE=multi
