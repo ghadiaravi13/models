@@ -8,6 +8,7 @@ INIT_CHECKPOINT=model/PLATO
 DATA_TYPE=multi
 USE_VISUALDL=false
 BATCH_SIZE=$1
+# preferred bs is 6
 
 # CUDA environment settings.
 export CUDA_VISIBLE_DEVICES=0
