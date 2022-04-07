@@ -7,6 +7,7 @@ DATA_DIR=data/DailyDialog
 INIT_CHECKPOINT=model/PLATO
 DATA_TYPE=multi
 USE_VISUALDL=false
+BATCH_SIZE=$1
 
 # CUDA environment settings.
 export CUDA_VISIBLE_DEVICES=0
@@ -33,7 +34,7 @@ python -u \
     --vocab_path $VOCAB_PATH \
     --data_dir $DATA_DIR \
     --data_type $DATA_TYPE \
-    --batch_size 6 \
+    --batch_size $BATCH_SIZE \
     --valid_steps 2000 \
     --num_type_embeddings 2 \
     --use_discriminator true \
