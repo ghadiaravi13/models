@@ -6,6 +6,8 @@ VOCAB_PATH=model/Bert/vocab.txt
 DATA_DIR=data/DailyDialog
 INIT_CHECKPOINT=outputs/DailyDialog/best.model
 DATA_TYPE=multi
+BATCH_SIZE=$1
+# preferred bs is 4
 
 # CUDA environment settings.
 export CUDA_VISIBLE_DEVICES=0
@@ -27,7 +29,7 @@ python -u \
     --vocab_path $VOCAB_PATH \
     --data_dir $DATA_DIR \
     --data_type $DATA_TYPE \
-    --batch_size 4 \
+    --batch_size $BATCH_SIZE \
     --num_type_embeddings 2 \
     --num_latent 20 \
     --use_discriminator true \
